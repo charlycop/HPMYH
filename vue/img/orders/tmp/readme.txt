@@ -1,0 +1,1 @@
+Dans ce dossier seront transféré momentanément les photos des abonnés afin d'être retaillées. Puis elles seront supprimées dans la foulée.

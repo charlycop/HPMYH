@@ -1,0 +1,289 @@
+body
+{
+    font-family: sans-serif;
+    background-color: #ECF0F1;
+}
+
+h1, h3, h2
+{
+    text-align:center;
+}
+
+h3
+{
+    background-color: black;
+    color:white;
+    font-size:0.9em;
+    margin-bottom:0px;
+}
+
+.billet_auteur img
+{
+    border-radius: 60px;
+}
+
+#add_button
+{
+    position: fixed;
+    width: 85px;
+    height: 85px;
+    bottom: 10px;
+    left: 10px;
+    background-color: blue; 
+    border-radius: 60px;
+    color: white;
+}
+
+h3 span
+{
+    background-color:black;
+    color:white;
+    font-size:0.8em;
+    margin-bottom:0px;
+    font-weight: normal;
+}
+
+#login, #login a
+{
+    text-align: center;
+    margin: auto;
+    font-size: 3em;
+    color:black;
+}
+
+.news p, .news pre, .news .divmembre
+{
+    background-color: white;
+    margin-top:0px;
+    color: black;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.news, #header
+{
+    max-width: 960px;
+    margin:auto;
+}
+
+#header
+{
+    width: calc(100% - 20px);
+}
+
+.news
+{
+    background-color: white;
+    box-shadow: 0px 0px 10px 3px grey;
+}
+
+.billet
+{
+    position: relative;
+}
+
+.billet_auteur
+{
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    margin-left: 5px;
+    margin-top : 5px;
+}
+
+.billet_contenu
+{
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    width: calc(100% - 390px);
+}
+
+.product_picture
+{
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    margin-top : 3px;
+    text-align: center;
+}
+
+.membre
+{
+    display: inline-block;
+}
+
+.avatar30
+{
+    border-radius: 15px;
+}
+
+.avatar150
+{
+    box-shadow: 0px 0px 10px 3px grey;
+        display: inline-block;
+}
+
+a
+{
+    text-decoration: none;
+    color: blue;
+    font-size: small;
+}
+
+.inscription, .inscription table
+{
+    
+    margin: auto;
+    width: 100%;
+    /* border-radius: 5px;
+    background-color: #CCCCCC; */
+}
+
+.inscription, .titre_inscription
+{
+    /*padding: 2px 24px 28px 24px;
+      /* border-radius: 5px; 
+   /* box-shadow: 3px 3px 3px grey; */
+    text-align:center;
+    text-transform: uppercase;
+}
+
+.nouveau_billet
+{
+    padding: 2px 24px 28px 24px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px grey;
+    text-align:center;
+    margin: auto;  
+}
+
+.nouveau_billet, .nouveau_billet table
+{
+    background-color: #CCCCCC;
+    margin-top: 30px;
+    width: 800px;
+    border-radius: 5px;
+}
+
+.bouton
+{
+    text-align: center;
+}
+
+td
+{
+    width:50%;
+}
+
+.sub_error
+{
+    font-size: 0.8em;
+    color: red;
+}
+
+#normal
+{
+    text-align: left;
+    background-color: #CCFFFF;
+}
+
+.header_master
+{
+    background-color: grey;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    padding-top: 10px;
+    box-shadow: 0px 0px 10px 1px black;
+}
+
+.header_master a
+{
+    color: white;
+}
+
+.news a
+{
+    font-size: 0.6em;
+}
+
+#titre
+{
+    padding-top: 30px;
+}
+
+#header_left, #header_right, .avatartop
+{
+    display: inline-block;
+    position: relative;
+}
+
+.avatar30
+{
+    margin-top: -4px;
+    margin-left: 5px;
+}
+
+#header_right, #avatartop
+{
+    float: right;
+}
+
+/* LIGHTBOX */
+
+#shadowing_connexion, #shadowing_inscription
+{
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index:10;
+    opacity:0.5;
+    filter: alpha(opacity=50);
+}
+
+
+#box_inscription, #box_connexion
+{
+    display: none;
+    position: fixed;
+    top: 25%;
+    left: 42%;
+    width: 300px;
+    height: 400px;
+    padding: 0px;
+    margin:0;
+    border: 0px solid grey;
+    box-shadow: 0px 0px 3px 3px grey;
+    background-color: #CCCCCC;
+    /*border-radius: 5px;*/
+    z-index:101;
+    overflow: auto;
+}
+
+#boxtitle_connexion, #boxtitle_inscription
+{
+    display:none; 
+    position:absolute;
+    float:center;
+    top:0;
+    left:0;
+    width:496px;
+    height:24px;
+    padding:0;
+    padding-top:4px;
+    left-padding:8px;
+    margin:0;
+    border-bottom:4px solid #3CF;
+    background-color: #09c;
+    color:white;
+    text-align:center;
+}
