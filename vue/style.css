@@ -98,7 +98,7 @@ h3 span
     position: relative;
     vertical-align: top;
     display: inline-block;
-    width: calc(100% - 390px);
+    width: calc(100% - 438px);
 }
 
 .product_picture
@@ -107,7 +107,7 @@ h3 span
     vertical-align: top;
     display: inline-block;
     margin-top : 3px;
-    text-align: center;
+    text-align: left;
 }
 
 .membre

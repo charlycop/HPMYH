@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
     <head>
-        <title>Wang Li</title>
+        <title>海派名媛汇</title>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="vue/style.css" />
     </head>
@@ -28,6 +28,25 @@ foreach($orders as $order)
         </div>
 
         <div class="product_picture">
+            <div class="product_picture">
+                卖价 : <?php echo $order['sell_price']; ?>¥
+                <form action="controleur/post_customer_paid.php" method="post">
+                    <label name="customer_paid">收款 : <input type="text" name="customer_paid" id="customer_paid" size="5" maxlength="5" value="<?php echo $order['customer_paid']; ?>" required/>
+                    </label><input type="hidden" name="id_order" id="id_order" value="<?php echo $order['id_order']; ?>"/>
+                    <input type="submit" value="保存"/>
+                </form>
+                <form action="controleur/post_pupuce_paid.php" method="post">
+                    <label name="pupuce_paid">成本 : <input type="text" name="pupuce_paid" id="pupuce_paid" size="5" maxlength="5" value="<?php echo $order['pupuce_paid']; ?>" required/>
+                    </label><input type="hidden" name="id_order" id="id_order" value="<?php echo $order['id_order']; ?>"/>
+                    <input type="submit" value="保存"/>
+                </form>
+                <form action="controleur/post_tracking.php" method="post">
+                    <input type="text" name="tracking" id="tracking" size="13" maxlength="13" value="<?php echo $order['parcel']; ?>" placeholder="EMS" required/>
+                    <input type="hidden" name="id_order" id="id_order" value="<?php echo $order['id_order']; ?>"/>
+                    <input type="submit" value="保存"/>
+                </form>
+            </div>
+
             <div class="product_picture">
             <?php
             if (isset($order['picture']))
@@ -57,13 +76,6 @@ foreach($orders as $order)
                 <a href="controleur/tobuy.php?order=<?php echo $order['id_order']; ?>"><img src="vue/img/bought.jpg" /></a>
                 <?php
                  } ?>
-            </div>
-            <div class="product_picture">
-                <form action="controleur/post_tracking.php" method="post">
-                    <input type="text" name="tracking" id="tracking" size="13" maxlength="13" value="<?php echo $order['parcel']; ?>" required/><br/>
-                    <input type="hidden" name="id_order" id="id_order" value="<?php echo $order['id_order']; ?>"/>
-                    <input type="submit" value="保存"/>
-                </form>
             </div>
         </div>
     </div>
