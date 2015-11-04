@@ -92,6 +92,10 @@ foreach($orders as $order)
 }
 ?>
 
+<div class="bouton4">
+<a href="controleur/csv_total.php">DOWNLOAD CSV</a>
+</div>
+
 <div class="news">
     <div class="billet">
         <h3>其他费用</h3>         <div class="liste_expenses">   
@@ -118,7 +122,9 @@ foreach($orders as $order)
 <div id="add_expense">
     <a href="add_expense.php"><img src="vue/img/add_expense.png"></a>
 </div>
-    
+<div class="bouton4">
+<a href="controleur/csv_expenses.php">DOWNLOAD CSV</a>
+</div>
 </div>
 </body>
 </html>
