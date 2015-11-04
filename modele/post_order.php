@@ -11,5 +11,8 @@
             'sell_price' => $sell_price,
             'customer_paid' => $customer_paid
 			));
+
+        $resultat=$bdd->lastInsertId();
+        return $resultat;
     }
 }

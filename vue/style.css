@@ -4,6 +4,13 @@ body
     background-color: #ECF0F1;
 }
 
+#login
+{
+    margin: auto;
+    text-align: center;
+    font-size: 6em;
+}
+
 h1, h3, h2
 {
     text-align:center;
@@ -15,6 +22,12 @@ h3
     color:white;
     font-size:0.9em;
     margin-bottom:0px;
+}
+
+#liste_order
+{
+    text-align: right;
+    width:80%;
 }
 
 .billet_auteur img
@@ -34,6 +47,26 @@ h3
     color: white;
 }
 
+#add_ems
+{
+    position: fixed;
+    width: 85px;
+    height: 85px;
+    bottom: 100px;
+    left: 10px;
+}
+
+#add_expense
+{
+    position: fixed;
+    width: 85px;
+    height: 85px;
+    bottom: 190px;
+    left: 10px;
+    background-color: green; 
+    border-radius: 60px;
+}
+
 h3 span
 {
     background-color:black;
@@ -43,13 +76,7 @@ h3 span
     font-weight: normal;
 }
 
-#login, #login a
-{
-    text-align: center;
-    margin: auto;
-    font-size: 3em;
-    color:black;
-}
+
 
 .news p, .news pre, .news .divmembre
 {
@@ -93,11 +120,28 @@ h3 span
     margin-top : 5px;
 }
 
-.billet_contenu
+.liste_expenses, .billet_contenu
 {
     position: relative;
     vertical-align: top;
     display: inline-block;
+    font-size: 1.5em;
+}
+
+.liste_expenses hr
+{
+    width:90%;
+}
+
+.liste_expenses
+{
+    width: 100%;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.billet_contenu
+{
     width: calc(100% - 438px);
 }
 
@@ -130,7 +174,6 @@ a
 {
     text-decoration: none;
     color: blue;
-    font-size: small;
 }
 
 .inscription, .inscription table
@@ -205,11 +248,6 @@ td
 .header_master a
 {
     color: white;
-}
-
-.news a
-{
-    font-size: 0.6em;
 }
 
 #titre
