@@ -24,5 +24,9 @@
         </form>
     </div>
 
+<div id="add_button">
+    <a href="controleur/delete_order.php?order=<?php echo $order['id_order']; ?>&pic=<?php echo $order['picture']; ?>"><img src="vue/img/trashbin.png"></a>
+</div>
+
 </body>
 </html>
