@@ -25,14 +25,9 @@ if (isset($last_id_order))
 	//Quoiqu'il arrive on efface le fichier de l'utilisateur
     unlink ($uploadfile);
 
-    // Tout est OK, on retourne sur la liste des billets
-	header('Location: ../index.php');
-    
 	}
-	else
-	{
-		echo 'Error when proceeding the picture, ask Charly';
-	}
+// Tout est OK, on retourne sur la liste des billets
+header('Location: ../index.php');
 
 }
 
