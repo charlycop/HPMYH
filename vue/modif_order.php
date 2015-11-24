@@ -18,6 +18,7 @@
              <label name="customer_paid">收款 : <input type="tel" name="customer_paid" id="customer_paid" size="5" maxlength="5" value="<?php echo $order['customer_paid']; ?>" required/>¥</p>
                     </label></p>
             <p><textarea id="order_description" name="order_description" cols="90" rows="10" required><?php echo $order['description']; ?></textarea></p>
+            <p><textarea id="order_address" name="order_address" cols="50" rows="5" placeholder="地址"><?php echo $order['address']; ?></textarea></p>
             <input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
             <p><input name="userfile" type="file" /></p>
             <input type="hidden" name="id_order" id="id_order" value="<?php echo $order['id_order']; ?>"/>

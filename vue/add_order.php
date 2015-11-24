@@ -18,6 +18,7 @@
              <label name="customer_paid">收款 : <input type="tel" name="customer_paid" id="customer_paid" size="5" maxlength="5" placeholder="i.e.2390" required/>¥</p>
                     </label></p>
             <p><textarea id="order_description" name="order_description" placeholder="描述" cols="90" rows="10" required></textarea></p>
+            <p><textarea id="order_address" name="order_address" cols="50" rows="5" placeholder="地址"></textarea></p>
             <input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
             <p><input name="userfile" type="file" /></p>
             <div class="bouton"><input type="submit" value="提交"/></div>

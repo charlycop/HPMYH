@@ -5,12 +5,13 @@ include_once('../modele/connexion_sql.php');
 // On sécurise le titre avant l'injection dans la bdd
 $order_clean = htmlspecialchars($_POST['order_description']);
 $ref_clean = htmlspecialchars($_POST['order_reference']);
+$address_clean = htmlspecialchars($_POST['order_address']);
 $sell_price = (int) $_POST['sell_price'];
 $customer_paid = (int) $_POST['customer_paid'];
 
 // On poste le nouvel order
 include_once('../modele/post_order.php');
-$last_id_order=post_order($order_clean,$_SESSION['id'],$ref_clean,$sell_price,$customer_paid);
+$last_id_order=post_order($order_clean,$address_clean,$_SESSION['id'],$ref_clean,$sell_price,$customer_paid);
 
 if (isset($last_id_order))
 {
