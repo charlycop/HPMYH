@@ -3,6 +3,7 @@
         <title>海派名媛汇</title>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="vue/style.css" />
+        <link href="vue/img/favicon.ico" rel="icon" type="image/x-icon" />
     </head>
         
     <body>
@@ -30,8 +31,8 @@ foreach($orders as $order)
             <?php echo nl2br(htmlspecialchars($order['description'])); ?>
         </div>
 
-        <div class="product_picture">
-            <div class="product_picture">
+        <div class="product_details">
+            <div class="product_details">
                 卖价 : <?php echo $order['sell_price']; ?>¥
                 <form action="controleur/post_customer_paid.php" method="post">
                     <label name="customer_paid">收款 : <input type="tel" name="customer_paid" id="customer_paid" size="5" maxlength="5" value="<?php echo $order['customer_paid']; ?>" required/>
@@ -61,27 +62,26 @@ foreach($orders as $order)
             {
                 $order_picture = 'vue/img/orders/'.$order['id_order'].'_85x85'.$order['picture'].'';
                 $order_picture500 = 'vue/img/orders/'.$order['id_order'].'_500x500'.$order['picture'].'';
+                ?><a href="<?php echo $order_picture500; ?>"><img src="<?php echo $order_picture; ?>" /></a><?php
             }
 
             else
             {
-                $order_picture = 'vue/img/orders/default.png';
-                $order_picture500 = '#';
+                echo 'p';
             }
             ?> 
             
-            <a href="<?php echo $order_picture500; ?>"><img src="<?php echo $order_picture; ?>" /></a>
             </div>
-            <div class="product_picture">
+            <div class="bought_buy">
                 <?php
                 if (!isset($order['buy_date']))
                 { ?>
-                <a href="controleur/bought.php?order=<?php echo $order['id_order']; ?>"><img src="vue/img/tobuy.jpg" /></a>
+                <a id="tobuy" href="controleur/bought.php?order=<?php echo $order['id_order']; ?>">C</a>
                 <?php
                 }
                 else
                 { ?>
-                <a href="controleur/tobuy.php?order=<?php echo $order['id_order']; ?>"><img src="vue/img/bought.jpg" /></a>
+                <a id="bought" href="controleur/tobuy.php?order=<?php echo $order['id_order']; ?>">C</a>
                 <?php
                  } ?>
             </div>
@@ -114,13 +114,14 @@ foreach($orders as $order)
 </div>
 
 <div id="add_button">
-    <a href="add_order.php"><img src="vue/img/add.png"></a>
+    <a href="add_order.php">]</a>
 </div>
+
 <div id="add_ems">
-    <a href="add_ems.php"><img src="vue/img/add_ems.png"></a>
+    <a href="add_ems.php">%</a>
 </div>
 <div id="add_expense">
-    <a href="add_expense.php"><img src="vue/img/add_expense.png"></a>
+    <a href="add_expense.php">¥</a>
 </div>
 <div class="bouton4">
 <a href="controleur/csv_expenses.php">DOWNLOAD CSV</a>

@@ -3,6 +3,7 @@
         <title>Wang Li</title>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="../vue/style.css" />
+        <link href="../vue/img/favicon.ico" rel="icon" type="image/x-icon" />
     </head>
         
     <body>

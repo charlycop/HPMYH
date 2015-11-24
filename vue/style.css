@@ -1,6 +1,33 @@
+@font-face {
+    font-family: 'entyporegular';
+    src: url('fonts/entypo_regular_macroman/Entypo-webfont.eot');
+    src: url('fonts/entypo_regular_macroman/Entypo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/entypo_regular_macroman/Entypo-webfont.woff') format('woff'),
+         url('fonts/entypo_regular_macroman/Entypo-webfont.ttf') format('truetype'),
+         url('fonts/entypo_regular_macroman/Entypo-webfont.svg#entyporegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('fonts/opensans_regular_macroman/OpenSans-Regular-webfont.eot');
+    src: url('fonts/opensans_regular_macroman/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/opensans_regular_macroman/OpenSans-Regular-webfont.woff') format('woff'),
+         url('fonts/opensans_regular_macroman/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('fonts/opensans_regular_macroman/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+div
+{
+    border : solid 1px black;
+}
+
 body
 {
-    font-family: sans-serif;
+     font-family: 'open_sansregular';
     background-color: #ECF0F1;
 }
 
@@ -50,20 +77,21 @@ h3
     border-radius: 60px;
 }
 
-#add_button
+#add_button, #garbage
 {
     position: fixed;
+    background-color: blue;
+    border-radius: 60px;
     width: 85px;
     height: 85px;
     bottom: 10px;
     left: 10px;
-    background-color: blue; 
-    border-radius: 60px;
-    color: white;
 }
 
 #add_ems
 {
+    background-color: #115883;
+    border-radius: 60px;
     position: fixed;
     width: 85px;
     height: 85px;
@@ -73,13 +101,50 @@ h3
 
 #add_expense
 {
+    background-color: green;
+    border-radius: 60px;
     position: fixed;
     width: 85px;
     height: 85px;
     bottom: 190px;
     left: 10px;
-    background-color: green; 
-    border-radius: 60px;
+}
+
+#add_expense a, #add_ems a, #add_button a, #garbage a
+{
+    font-family: "entyporegular";
+    position: absolute;
+    color: #FFF;
+    text-decoration: none;
+}
+
+#add_button a
+{
+    margin-left: 4px;
+    margin-top: -6px;
+    font-size: 200px;
+}
+
+#add_ems a
+{
+    margin-left: 5px;
+    margin-top: 9px;
+    font-size: 135px;
+}
+
+#add_expense a
+{
+    font-family: 'open_sansregular';
+    margin-left: 20px;
+    margin-top: -10px;
+    font-size: 80px;
+}
+
+#garbage a
+{
+    margin-left: 13px;
+    margin-top: 8px;
+    font-size: 136px;
 }
 
 h3 span
@@ -157,16 +222,46 @@ h3 span
 
 .billet_contenu
 {
-    width: calc(100% - 438px);
+    width: calc(100% - 520px);
 }
 
-.product_picture
-{
+.product_details
+{  
     position: relative;
     vertical-align: top;
     display: inline-block;
     margin-top : 3px;
     text-align: left;
+}
+
+.product_picture, .bought_buy
+{
+    font-family: "entyporegular";
+    font-size: 140px;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    margin-top : 3px;
+    text-align: left;
+    color: gainsboro;
+}
+
+.bought_buy
+{
+    margin-top : 8px;
+}
+
+#tobuy, #bought
+{
+    position: absolute;
+    color: black;
+    text-decoration: none;
+    font-size: 150px;
+}
+
+#bought
+{
+    color: orange;
 }
 
 .membre

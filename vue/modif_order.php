@@ -3,6 +3,7 @@
         <title>海派名媛汇</title>
         <meta charset="utf-8" />
          <link rel="stylesheet" href="vue/style.css" />
+         <link href="vue/img/favicon.ico" rel="icon" type="image/x-icon" />
     </head>
         
     <body>
@@ -24,8 +25,8 @@
         </form>
     </div>
 
-<div id="add_button">
-    <a href="controleur/delete_order.php?order=<?php echo $order['id_order']; ?>&pic=<?php echo $order['picture']; ?>"><img src="vue/img/trashbin.png"></a>
+<div id="garbage">
+    <a href="controleur/delete_order.php?order=<?php echo $order['id_order']; ?>&pic=<?php echo $order['picture']; ?>">u</a>
 </div>
 
 </body>
