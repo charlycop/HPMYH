@@ -55,7 +55,7 @@ foreach($orders as $order)
                     }
                 ?>
             </div>
-
+            
             <div class="product_picture">
             <?php
             if (isset($order['picture']))
@@ -72,6 +72,7 @@ foreach($orders as $order)
             ?> 
             
             </div>
+            
             <div class="bought_buy">
                 <?php
                 if (!isset($order['buy_date']))
@@ -85,8 +86,20 @@ foreach($orders as $order)
                 <?php
                  } ?>
             </div>
-        </div>
-    </div>
+            <div class="bought_buy">
+                <?php
+                if (!isset($order['sent_date']))
+                { ?>
+                <a id="tobuy" href="controleur/sent.php?order=<?php echo $order['id_order']; ?>">/</a>
+                <?php
+                }
+                else
+                { ?>
+                <a id="bought" href="controleur/tosend.php?order=<?php echo $order['id_order']; ?>">/</a>
+                <?php
+                 } ?>
+            </div>
+    </div></div>
 </div>
 <?php
 }
