@@ -20,15 +20,35 @@
     font-style: normal;
 }
 
+body
+{
+    font-family: 'open_sansregular';
+    background-color: #ECF0F1;
+}
+
+#tableau
+{
+    width:100%;
+    text-align: left;
+    font-size: 1.5em;
+}
+
+#td_date, #td_name, #td_price
+{
+    width:10%;
+}
+
+#insideems
+{
+    text-decoration: none;
+    color: green;
+    font-family: "entyporegular";
+    font-size: 45px;
+}
+
 div
 {
    /* border : solid 1px black;*/
-}
-
-body
-{
-     font-family: 'open_sansregular';
-    background-color: #ECF0F1;
 }
 
 #login

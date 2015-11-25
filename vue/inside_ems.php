@@ -7,9 +7,11 @@
     </head>
         
     <body>
+
+    <h1><?php echo $tracking_parcel; ?></h1>
 <?php
 
-foreach($orders as $order)
+foreach($liste_orders as $order)
 {
 ?>
 <div class="news">
@@ -105,73 +107,6 @@ foreach($orders as $order)
 }
 ?>
 
-<div class="bouton4">
-<a href="controleur/csv_total.php">DOWNLOAD CSV</a>
-</div>
-
-<div class="news">
-    <h3>其他费用</h3>            
-    <table id="tableau">
-        <thead>
-            <tr>
-              <th scope="col">日期</th>
-              <th scope="col">名字</th>
-              <th scope="col">款项</th>
-              <th scope="col">金额</th>
-            </tr>
-        </thead>
-    
-        <tbody>
-            <?php
-            foreach($expenses as $expense)
-                {
-                ?>
-                <tr>
-                  <td id="td_date"><?php echo $expense['date_expense']; ?></td>
-                  <td id="td_name"><?php echo $expense['nickname']; ?></td>
-                  <td><?php echo $expense['description']; ?></td>
-                  <td id="td_price"><?php echo $expense['price']; ?>¥</td>
-                </tr>
-                <?php
-                }
-                ?>
-        </tbody>
-    </table> 
-</div>
-
-<div class="bouton4">
-<a href="controleur/csv_expenses.php">DOWNLOAD CSV</a>
-</div>
-
-<div class="news">
-    <h3>EMS</h3>            
-    <table id="tableau">
-        <thead>
-            <tr>
-              <th scope="col">日期</th>
-              <th scope="col">单号</th>
-              <th scope="col">金额</th>
-            </tr>
-        </thead>
-    
-        <tbody>
-            <?php
-            foreach($liste_ems as $ems_parcel)
-                {
-                ?>
-                <tr>
-                  <td id="td_date"><?php echo $ems_parcel['date_envoi']; ?></td>
-                  <td id="td_name"><a target="_blank" href="http://www.colissimo.fr/portail_colissimo/suivre.do?colispart=<?php echo $ems_parcel['tracking']; ?>"><?php echo $ems_parcel['tracking']; ?></a>
-                   <a id="insideems" href="inside_ems.php?id=<?php echo $ems_parcel['id']; ?>&parcel=<?php echo $ems_parcel['tracking']; ?>" >l</a></td>
-                  <td id="td_price"><?php echo $ems_parcel['price']; ?>¥</td>
-                </tr>
-                <?php
-                }
-                ?>
-        </tbody>
-    </table> 
-</div>
-
 <!-- Groupe de boutons -->
 <div id="add_button">
     <a href="add_order.php">]</a>
@@ -183,8 +118,6 @@ foreach($orders as $order)
 <div id="add_expense">
     <a href="add_expense.php">¥</a>
 </div>
-
-
 
 </body>
 </html>
